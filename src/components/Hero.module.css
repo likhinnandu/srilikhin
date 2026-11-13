@@ -1,0 +1,112 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: calc(var(--nav-h) + 24px);
+  padding-bottom: clamp(28px, 4vw, 56px);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.stage {
+  position: relative;
+  flex: 1;
+  min-height: 52svh;
+  display: grid;
+  align-items: center;
+}
+
+.name {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: 100%;
+  padding-inline: var(--gutter);
+  font-size: clamp(5rem, 21.5vw, 24rem);
+  line-height: 0.8;
+  color: var(--ink);
+  pointer-events: none;
+}
+
+.first {
+  justify-self: start;
+}
+
+.last {
+  justify-self: end;
+  margin-top: -0.04em;
+}
+
+.canvas {
+  position: absolute;
+  z-index: 0;
+  inset: -12% 0;
+  pointer-events: none;
+}
+
+.canvas[data-fallback] {
+  inset: 10% 30%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--card), var(--bg-3) 60%, transparent 70%);
+  filter: blur(2px);
+}
+
+.bottom {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  gap: 24px;
+  margin-top: clamp(24px, 4vw, 48px);
+}
+
+@media (min-width: 960px) {
+  .bottom {
+    grid-template-columns: 1fr 1.2fr 1fr;
+    align-items: end;
+  }
+  .actions {
+    justify-self: end;
+  }
+}
+
+.roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-self: end;
+}
+
+.lede {
+  max-width: 44ch;
+  color: var(--ink-2);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.meta {
+  position: absolute;
+  top: calc(var(--nav-h) + 28px);
+  left: var(--gutter);
+  right: var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+@media (max-width: 959px) {
+  .meta {
+    display: none;
+  }
+  .name {
+    font-size: clamp(5rem, 23vw, 12rem);
+  }
+  .canvas {
+    inset: -6% -14%;
+  }
+}
