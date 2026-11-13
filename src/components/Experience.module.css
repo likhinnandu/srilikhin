@@ -63,7 +63,7 @@
 }
 
 .role {
-  font-size: clamp(1.4rem, 2.3vw, 2.2rem);
+  font-size: clamp(1.25rem, 2vw, 1.9rem);
   font-variation-settings: 'wdth' 86;
   font-weight: 700;
   text-transform: none;

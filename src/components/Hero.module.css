@@ -24,7 +24,7 @@
   display: grid;
   width: 100%;
   padding-inline: var(--gutter);
-  font-size: clamp(5rem, 21.5vw, 24rem);
+  font-size: clamp(4.2rem, 18.5vw, 20rem);
   line-height: 0.8;
   color: var(--ink);
   pointer-events: none;
@@ -104,7 +104,7 @@
     display: none;
   }
   .name {
-    font-size: clamp(5rem, 23vw, 12rem);
+    font-size: clamp(4.2rem, 20vw, 10rem);
   }
   .canvas {
     inset: -6% -14%;

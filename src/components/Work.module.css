@@ -300,7 +300,7 @@
 
 .dialogTitle {
   margin-top: 10px;
-  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-size: clamp(1.8rem, 3.5vw, 3.1rem);
 }
 
 .dialogSum {

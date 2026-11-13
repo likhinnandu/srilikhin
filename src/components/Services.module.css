@@ -32,7 +32,7 @@
 }
 
 .title {
-  font-size: clamp(2rem, 5.2vw, 5.4rem);
+  font-size: clamp(1.8rem, 4.5vw, 4.6rem);
   font-variation-settings: 'wdth' 76;
   transition: transform 0.7s var(--ease);
 }
