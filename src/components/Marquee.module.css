@@ -48,3 +48,12 @@
   border-radius: 50%;
   background: var(--accent);
 }
+
+/* The ticker is decorative and low-contrast, so it keeps moving under
+   reduced motion, just slower. Overrides the global freeze in global.css. */
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-motion='full']) .track {
+    animation-duration: 60s !important;
+    animation-iteration-count: infinite !important;
+  }
+}
